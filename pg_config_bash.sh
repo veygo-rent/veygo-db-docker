@@ -25,8 +25,8 @@ sed -i "s/^host\s\+/#host /" "$PGDATA/pg_hba.conf"
 
 # Whitelist addresses over SSL with password authentication (md5 or scram-sha-256)
 {
-  echo "host all all 127.0.0.1/32            md5"
-  echo "host all all 172.18.0.0/16           md5"
+  echo "host all all 127.0.0.1/32            trust"
+  echo "host all all 172.18.0.0/16           trust"
 } >> "$PGDATA/pg_hba.conf"
 
 echo "=== SSL & Whitelist configuration complete ==="
